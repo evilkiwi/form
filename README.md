@@ -13,6 +13,11 @@
 
 Inspired by [vue-hooks-form](https://github.com/beizhedenglong/vue-hooks-form).
 
+- Asynchronous validation via [async-validator](https://github.com/yiminghe/async-validator)
+- No forced HTML structure/format
+- Error handling
+- TypeScript
+
 ## Installation
 
 This package is available via NPM:
