@@ -22,5 +22,5 @@ export interface Field<T> {
     hasError: ComputedRef<boolean>;
     setError: (text: string) => void;
     clearError: () => void;
-    value: WritableComputedRef<T|string>;
+    value: WritableComputedRef<T>;
 }
