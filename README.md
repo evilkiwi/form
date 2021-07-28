@@ -47,7 +47,7 @@ A full example App is provided in [example/](https://github.com/casthub/form/tre
             @focus="email.clearError"
             v-model="email.value"
         />
-        <p class="err" v-if="email.hasError">{{ email.error?.message }}</p>
+        <p class="err" v-if="email.error">{{ email.error.message }}</p>
         <label for="email">Password</label>
         <input
             type="password"
@@ -58,7 +58,7 @@ A full example App is provided in [example/](https://github.com/casthub/form/tre
             @focus="password.clearError"
             v-model="password.value"
         />
-        <p class="err" v-if="password.hasError">{{ password.error?.message }}</p>
+        <p class="err" v-if="password.error">{{ password.error.message }}</p>
         <button
             type="submit"
             :disabled="loading"
