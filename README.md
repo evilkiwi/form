@@ -107,23 +107,30 @@ validationMode|`submit`|`'change'|'submit'`|NOT IMPLEMENTED YET. Whether to vali
 
 **Option**|**Type**|**Description**
 -----|-----|-----
-`useField`|`Field<unknown>`|[Documented below.](#use-field)
+`useField`|`Field<unknown>`|[Documented below.](#usefield)
 `handle`|`(run: values => Promise<void>) => async (e?: Event) => Promise<void>`|Registers the asynchronous handler that runs once a form is submitted and successfully validated.
 `reset`|`() => void`|Reset the Form to tis default state.
 `validate`|`() => Promise<boolean>`|Manually trigger validation and error handling.
 `clearErrors`|`() => void`|Clear all errors for all fields.
-`loading`|`Ref<boolean>`|Whether the form is currently exeuting.
+`loading`|`Ref<boolean>`|Whether the form is currently executing.
 `destroy`|`() => void`|Destroy and clean-up the Form handler. Happens automatically during `onBeforeUnmount`.
 
 ### `useField`
 
 #### Options
 
-TODO:
+Currently the options object provided to `useField` is inheritted from [async-validator](https://github.com/yiminghe/async-validator) and all options are forwarded as a validation field.
 
 #### Response
 
-TODO:
+**Option**|**Type**|**Description**
+-----|-----|-----
+`errors`|`ValidateError[]`|An array of all Errors set against this Field.
+`error`|`ValidateError\|null`|Optimistically picks one, if any, of the Errors against the field.
+`hasError`|`ComputedRef<boolean>`|Whether or not the Field has 1 or more errors.
+`setError`|`(text: string) => void`|Manually set the error on this field.
+`clearError`|`() => void`|Clears all Errors currently set against this Field.
+`value`|`WritableComputedRef<unknown\|string>`|The value for the field, compatible with `v-model`.
 
 ## To-do
 
