@@ -101,7 +101,7 @@ A full example App is provided in the [example](https://github.com/casthub/form/
 **Option**|**Default**|**Type**|**Description**
 -----|-----|-----|-----
 defaults|`{}`|`Record<string, any>`|Optionally provide defaults for the various fields in this object by key -> value pairs.
-validationMode|`submit`|`'change'|'submit'`|NOT IMPLEMENTED YET. Whether to validate input once submitted
+validationMode|`submit`|`'change'\|'submit'`|NOT IMPLEMENTED YET. Whether to validate input once submitted
 
 #### Response
 
