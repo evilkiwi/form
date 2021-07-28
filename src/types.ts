@@ -13,7 +13,7 @@ export interface FieldOptions extends RuleItem {
 }
 
 export type FieldValues<Fields extends DefaultFields> = {
-    [K in keyof Fields]: string|Fields[K];
+    [K in keyof Fields]: Fields[K];
 }
 
 export interface Field<T> {

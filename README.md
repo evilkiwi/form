@@ -130,7 +130,7 @@ Currently the options object provided to `useField` is inheritted from [async-va
 `hasError`|`ComputedRef<boolean>`|Whether or not the Field has 1 or more errors.
 `setError`|`(text: string) => void`|Manually set the error on this field.
 `clearError`|`() => void`|Clears all Errors currently set against this Field.
-`value`|`WritableComputedRef<unknown\|string>`|The value for the field, compatible with `v-model`.
+`value`|`WritableComputedRef<unknown>`|The value for the field, compatible with `v-model`.
 
 ## To-do
 
