@@ -32,7 +32,7 @@ npm install @casthub/form
 
 ## Usage
 
-A full example App is provided in [example/](https://github.com/casthub/form/tree/master/example).
+A full example App is provided in the [example](https://github.com/casthub/form/tree/master/example) folder.
 
 ```vue
 <template>
@@ -91,6 +91,39 @@ A full example App is provided in [example/](https://github.com/casthub/form/tre
     });
 </script>
 ```
+
+## API
+
+### `useForm`
+
+#### Options
+
+**Option**|**Default**|**Type**|**Description**
+-----|-----|-----|-----
+defaults|`{}`|`Record<string, any>`|Optionally provide defaults for the various fields in this object by key -> value pairs.
+validationMode|`submit`|`'change'|'submit'`|NOT IMPLEMENTED YET. Whether to validate input once submitted
+
+#### Response
+
+**Option**|**Type**|**Description**
+-----|-----|-----
+`useField`|`Field<unknown>`|[Documented below.](#use-field)
+`handle`|`(run: values => Promise<void>) => async (e?: Event) => Promise<void>`|Registers the asynchronous handler that runs once a form is submitted and successfully validated.
+`reset`|`() => void`|Reset the Form to tis default state.
+`validate`|`() => Promise<boolean>`|Manually trigger validation and error handling.
+`clearErrors`|`() => void`|Clear all errors for all fields.
+`loading`|`Ref<boolean>`|Whether the form is currently exeuting.
+`destroy`|`() => void`|Destroy and clean-up the Form handler. Happens automatically during `onBeforeUnmount`.
+
+### `useField`
+
+#### Options
+
+TODO:
+
+#### Response
+
+TODO:
 
 ## To-do
 
