@@ -32,7 +32,65 @@ npm install @casthub/form
 
 ## Usage
 
-//
+A full example App is provided in [example/](https://github.com/casthub/form/tree/master/example).
+
+```vue
+<template>
+    <form @submit.prevent="submit">
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            :disabled="loading"
+            @focus="email.clearError"
+            v-model="email.value"
+        />
+        <p class="err" v-if="email.hasError">{{ email.error?.message }}</p>
+        <label for="email">Password</label>
+        <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            :disabled="loading"
+            @focus="password.clearError"
+            v-model="password.value"
+        />
+        <p class="err" v-if="password.hasError">{{ password.error?.message }}</p>
+        <button
+            type="submit"
+            :disabled="loading"
+        >Login</button>
+    </form>
+</template>
+
+<script lang="ts" setup>
+    import { useForm } from '@casthub/form';
+
+    const { useField, handle, loading } = useForm<{
+        email: string;
+        password: string;
+    }>({
+        defaults: {
+            email: 'hello@example.com',
+        },
+    });
+
+    const email = useField('email', {
+        type: 'email',
+        required: true,
+    });
+    const password = useField('password', {
+        required: true,
+    });
+
+    const submit = handle(async ({ email, password }) => {
+        alert(`Email: ${email} Password: ${password}`);
+    });
+</script>
+```
 
 ## To-do
 
