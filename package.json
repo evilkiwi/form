@@ -1,5 +1,5 @@
 {
-    "name": "@casthub/form",
+    "name": "@tnotifier/form",
     "version": "1.0.3",
     "description": "Vue 3 Utility Hook for Form handling and validation",
     "files": ["build"],
@@ -8,16 +8,16 @@
     "license": "GPL-3.0-only",
     "author": {
         "name": "CastHub Limited",
-        "url": "https://casthub.app",
-        "email": "support@casthub.app"
+        "url": "https://tnotifier.app",
+        "email": "support@tnotifier.app"
     },
-    "homepage": "https://github.com/casthub/form",
+    "homepage": "https://github.com/tnotifier/form",
     "bugs": {
-        "url": "https://github.com/casthub/form/issues"
+        "url": "https://github.com/tnotifier/form/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/casthub/form.git"
+        "url": "git+https://github.com/tnotifier/form.git"
     },
     "keywords": [
         "typescript",

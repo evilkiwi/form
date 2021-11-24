@@ -1,15 +1,15 @@
 <div align="center">
-    <a href="https://www.npmjs.com/package/@casthub/form" target="_blank">
-        <img src="https://img.shields.io/npm/v/@casthub/form?style=flat-square" alt="NPM" />
+    <a href="https://www.npmjs.com/package/@tnotifier/form" target="_blank">
+        <img src="https://img.shields.io/npm/v/@tnotifier/form?style=flat-square" alt="NPM" />
     </a>
     <a href="https://discord.gg/XMrHXtN" target="_blank">
         <img src="https://img.shields.io/discord/123906549860139008?color=7289DA&label=discord&logo=discord&logoColor=FFFFFF&style=flat-square" alt="Discord" />
     </a>
-    <img src="https://img.shields.io/npm/l/@casthub/form?style=flat-square" alt="Apache-2.0" />
+    <img src="https://img.shields.io/npm/l/@tnotifier/form?style=flat-square" alt="Apache-2.0" />
     <h3>Form Handling and Validation Hook for Vue 3</h3>
 </div>
 
-`@casthub/form` provides Vue 3 Hooks for consuming, validating and managing Forms.
+`@tnotifier/form` provides Vue 3 Hooks for consuming, validating and managing Forms.
 
 Inspired by [vue-hooks-form](https://github.com/beizhedenglong/vue-hooks-form).
 
@@ -23,16 +23,16 @@ Inspired by [vue-hooks-form](https://github.com/beizhedenglong/vue-hooks-form).
 This package is available via NPM:
 
 ```bash
-yarn add @casthub/form
+yarn add @tnotifier/form
 
 # or
 
-npm install @casthub/form
+npm install @tnotifier/form
 ```
 
 ## Usage
 
-A full example App is provided in the [example](https://github.com/casthub/form/tree/master/example) folder.
+A full example App is provided in the [example](https://github.com/tnotifier/form/tree/master/example) folder.
 
 ```vue
 <template>
@@ -67,7 +67,7 @@ A full example App is provided in the [example](https://github.com/casthub/form/
 </template>
 
 <script lang="ts" setup>
-    import { useForm } from '@casthub/form';
+    import { useForm } from '@tnotifier/form';
 
     const { useField, handle, loading } = useForm<{
         email: string;
