@@ -39,7 +39,7 @@ export default defineConfig({
             entry: join('src', 'index.ts'),
             fileName: 'index',
             name: 'Form',
-            formats: ['es'],
+            formats: ['es', 'cjs'],
         },
         rollupOptions: {
             external: ['vue'],
