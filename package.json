@@ -1,15 +1,17 @@
 {
     "name": "@tnotifier/form",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Vue 3 Utility Hook for Form handling and validation",
-    "files": ["build"],
+    "files": [
+        "build"
+    ],
     "sideEffects": false,
     "main": "./build/index.cjs.js",
     "module": "./build/index.es.js",
     "types": "./build/src/index.d.ts",
     "license": "GPL-3.0-only",
     "author": {
-        "name": "CastHub Limited",
+        "name": "Evil Kiwi Limited",
         "url": "https://tnotifier.app",
         "email": "support@tnotifier.app"
     },
@@ -28,6 +30,9 @@
         "validation",
         "hook"
     ],
+    "workspaces": [
+        "example"
+    ],
     "scripts": {
         "clean": "rimraf build",
         "prepack": "yarn build",
@@ -36,14 +41,14 @@
         "dev": "vite build --watch"
     },
     "devDependencies": {
-        "@vitejs/plugin-vue": "^1.2.5",
-        "@vue/compiler-sfc": "^3.1.5",
-        "async-validator": "^3.5.2",
+        "@vitejs/plugin-vue": "^2.2.0",
+        "@vue/compiler-sfc": "^3.2.30",
+        "async-validator": "^4.0.7",
         "rimraf": "^3.0.2",
-        "tslib": "^2.3.0",
-        "typescript": "^4.3.5",
-        "vite": "^2.4.3",
-        "vite-plugin-dts": "^0.5.3",
-        "vue": "next"
+        "tslib": "^2.3.1",
+        "typescript": "^4.5.5",
+        "vite": "^2.8.0",
+        "vite-plugin-dts": "^0.9.9",
+        "vue": "^3.2.30"
     }
 }
