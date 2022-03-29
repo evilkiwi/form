@@ -1,5 +1,5 @@
 {
-    "name": "@tnotifier/form",
+    "name": "@evilkiwi/form",
     "version": "1.0.5",
     "description": "Vue 3 Utility Hook for Form handling and validation",
     "files": [
@@ -12,16 +12,16 @@
     "license": "GPL-3.0-only",
     "author": {
         "name": "Evil Kiwi Limited",
-        "url": "https://tnotifier.app",
-        "email": "support@tnotifier.app"
+        "url": "https://evil.kiwi",
+        "email": "support@evil.kiwi"
     },
-    "homepage": "https://github.com/tnotifier/form",
+    "homepage": "https://github.com/evilkiwi/form",
     "bugs": {
-        "url": "https://github.com/tnotifier/form/issues"
+        "url": "https://github.com/evilkiwi/form/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tnotifier/form.git"
+        "url": "git+https://github.com/evilkiwi/form.git"
     },
     "keywords": [
         "typescript",

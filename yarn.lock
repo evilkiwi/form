@@ -31,6 +31,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@evilkiwi/form@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@evilkiwi/form@workspace:."
+  dependencies:
+    "@vitejs/plugin-vue": ^2.2.0
+    "@vue/compiler-sfc": ^3.2.30
+    async-validator: ^4.0.7
+    rimraf: ^3.0.2
+    tslib: ^2.3.1
+    typescript: ^4.5.5
+    vite: ^2.8.0
+    vite-plugin-dts: ^0.9.9
+    vue: ^3.2.30
+  languageName: unknown
+  linkType: soft
+
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -84,22 +100,6 @@ __metadata:
   checksum: c96381d4a37448ea280951e46233f7e541058cf57a57d4094dd4bdcaae43fa5872b5f2eb6bfb004591a68e29c5877abe3cdc210cb3588cbf20ab2877f31a7de7
   languageName: node
   linkType: hard
-
-"@tnotifier/form@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@tnotifier/form@workspace:."
-  dependencies:
-    "@vitejs/plugin-vue": ^2.2.0
-    "@vue/compiler-sfc": ^3.2.30
-    async-validator: ^4.0.7
-    rimraf: ^3.0.2
-    tslib: ^2.3.1
-    typescript: ^4.5.5
-    vite: ^2.8.0
-    vite-plugin-dts: ^0.9.9
-    vue: ^3.2.30
-  languageName: unknown
-  linkType: soft
 
 "@tootallnate/once@npm:1":
   version: 1.1.2
