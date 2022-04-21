@@ -42,7 +42,11 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
                 const total = errs.length;
 
                 for (let i = 0; i < total; i++) {
-                    errors.value[errs[i].field].push(errs[i]);
+                    const key = errs[i].field;
+
+                    if (key) {
+                        errors.value[key].push(errs[i]);
+                    }
                 }
 
                 resolve(false);
@@ -62,7 +66,7 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
         validators.value[name] = fieldOptions;
 
         // Assign a value if it didn't have a default.
-        if (!fields.value[name]) {
+        if (fields.value[name] === undefined) {
             fields.value[name] = '';
         }
 
