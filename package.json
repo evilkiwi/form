@@ -1,6 +1,6 @@
 {
     "name": "@evilkiwi/form",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Vue 3 Utility Hook for Form handling and validation",
     "files": [
         "build"
@@ -8,7 +8,7 @@
     "sideEffects": false,
     "main": "./build/index.cjs.js",
     "module": "./build/index.es.js",
-    "types": "./build/src/index.d.ts",
+    "types": "./build/index.d.ts",
     "license": "GPL-3.0-only",
     "author": {
         "name": "Evil Kiwi Limited",
