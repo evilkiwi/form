@@ -1,7 +1,8 @@
-import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue';
-import type { RuleItem, ValidateError } from 'async-validator';
-import Validator from 'async-validator';
-import type { DefaultFields, FieldOptions, Field, FieldValues, Options } from './types';
+import { computed, onBeforeUnmount, reactive, ref, watch } from "vue";
+import type { RuleItem, ValidateError } from "async-validator";
+import Validator from "async-validator";
+import type { DefaultFields, FieldOptions, Field, FieldValues, Options } from "./types";
+import { get, set } from "./utils";
 
 export function useForm<Fields extends DefaultFields>(options: Options<Fields>) {
     // Assign some helper types on a per-instance basis.
@@ -21,9 +22,13 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
     const loading = ref(false);
 
     // Re-create the Validator when the config changes.
-    const watcher = watch(validators, config => {
-        validator = new Validator(config);
-    }, { deep: true });
+    const watcher = watch(
+        validators,
+        (config) => {
+            validator = new Validator(config);
+        },
+        { deep: true }
+    );
 
     // Assign defaults.
     if (options.defaults) {
@@ -36,66 +41,70 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
     }
 
     // Validates all of the releveant fields.
-    const validate = async () => new Promise(resolve => {
-        validator.validate(fields.value, undefined, (errs, fields) => {
-            if (errs) {
-                const total = errs.length;
+    const validate = async () =>
+        new Promise((resolve) => {
+            validator.validate(fields.value, undefined, (errs, fields) => {
+                if (errs) {
+                    const total = errs.length;
 
-                for (let i = 0; i < total; i++) {
-                    const key = errs[i].field;
+                    for (let i = 0; i < total; i++) {
+                        const key = errs[i].field;
 
-                    if (key) {
-                        errors.value[key].push(errs[i]);
+                        if (key) {
+                            errors.value[key].push(errs[i]);
+                        }
                     }
+
+                    resolve(false);
                 }
 
-                resolve(false);
-            }
-
-            resolve(true);
+                resolve(true);
+            });
         });
-    });
 
     // Returns the references to a specific Field.
-    const useField = <K extends Keys>(name: K, fieldOptions: FieldOptions = {}) => {
-        if (!errors.value[name]) {
-            errors.value[name] = [];
+    const useField = <K extends Keys>(path: string, fieldOptions: FieldOptions = {}) => {
+        if (!get(errors.value, path)) {
+            set(errors.value, path, []);
         }
 
         // Append the Validator config.
-        validators.value[name] = fieldOptions;
+        set(validators.value, path, fieldOptions);
 
         // Assign a value if it didn't have a default.
-        if (fields.value[name] === undefined) {
-            fields.value[name] = '';
+        if (get(fields.value, path) === undefined) {
+            set(fields.value, path, "");
         }
 
         // Computed property for getting & setting the value of the field.
         const value = computed<Fields[K]>({
             get() {
-                return fields.value[name];
+                return get(fields.value, path);
             },
             set(val) {
-                fields.value[name] = val;
+                set(fields.value, path, val);
             },
         });
 
         // Computed property for fetching the current error(s).
-        const fieldErrors = computed<ValidateError[]>(() => errors.value[name] ?? []);
-        const fieldError = computed<ValidateError|null>(() => {
+        const fieldErrors = computed<ValidateError[]>(() => get(errors.value, path) ?? []);
+        const fieldError = computed<ValidateError | null>(() => {
             return fieldErrors.value.length > 0 ? fieldErrors.value[0] : null;
         });
 
         // Add some manual juice for custom errors.
         const setError = (text: string) => {
             clearError();
-            errors.value[name].push({
-                field: name,
-                message: text,
-            });
+            set(errors.value, path, [
+                ...get(errors.value, path),
+                {
+                    field: name,
+                    message: text,
+                },
+            ]);
         };
         const clearError = () => {
-            errors.value[name] = [];
+            set(errors.value, path, []);
         };
 
         // Return a reactive object for reactivity, ofc.
@@ -149,7 +158,8 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
 
         for (let i = 0; i < total; i++) {
             const key = keys[i];
-            fields.value[key] = (options.defaults && options.defaults[key]) ? options.defaults[key] : '';
+            fields.value[key] =
+                options.defaults && options.defaults[key] ? options.defaults[key] : "";
             errors.value[key] = [];
         }
 
@@ -175,4 +185,4 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
     };
 }
 
-export * from './types';
+export * from "./types";
