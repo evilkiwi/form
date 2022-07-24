@@ -2,8 +2,8 @@
     <a href="https://www.npmjs.com/package/@evilkiwi/form" target="_blank">
         <img src="https://img.shields.io/npm/v/@evilkiwi/form?style=flat-square" alt="NPM" />
     </a>
-    <a href="https://discord.gg/XMrHXtN" target="_blank">
-        <img src="https://img.shields.io/discord/123906549860139008?color=7289DA&label=discord&logo=discord&logoColor=FFFFFF&style=flat-square" alt="Discord" />
+    <a href="https://discord.gg/3S6AKZ2GR9" target="_blank">
+        <img src="https://img.shields.io/discord/1000573103094640731?color=7289DA&label=discord&logo=discord&logoColor=FFFFFF&style=flat-square" alt="Discord" />
     </a>
     <img src="https://img.shields.io/npm/l/@evilkiwi/form?style=flat-square" alt="Apache-2.0" />
     <h3>Form Handling and Validation Hook for Vue 3</h3>
