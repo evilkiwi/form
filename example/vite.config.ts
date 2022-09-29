@@ -16,7 +16,7 @@ export default defineConfig({
         ],
     },
     build: {
-        target: 'chrome91',
+        target: 'chrome104',
         sourcemap: true,
         outDir: 'build',
         assetsDir: '.',

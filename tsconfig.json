@@ -12,9 +12,9 @@
         "isolatedModules": true,
         "baseUrl": ".",
         "outDir": "./build/",
-        "module": "es2015",
+        "module": "es2020",
         "moduleResolution": "node",
-        "target": "es5",
+        "target": "es2020",
         "lib": [
             "esnext",
             "dom",

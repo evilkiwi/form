@@ -1,3 +1,9 @@
+# 1.0.8 (2022-09-29)
+
+- Moved to OYED `@oyed/form`
+- Moved repo to PNPM
+- Updated dependencies
+
 # 1.0.5 (2022-02-11)
 
 - Upgraded to Yarn 2

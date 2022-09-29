@@ -1,27 +1,27 @@
 {
-    "name": "@evilkiwi/form",
-    "version": "1.0.7",
+    "name": "@oyed/form",
+    "version": "1.0.8",
     "description": "Vue 3 Utility Hook for Form handling and validation",
     "files": [
         "build"
     ],
     "sideEffects": false,
-    "main": "./build/index.cjs.js",
-    "module": "./build/index.es.js",
+    "main": "./build/index.js",
+    "module": "./build/index.mjs",
     "types": "./build/index.d.ts",
     "license": "GPL-3.0-only",
     "author": {
-        "name": "Evil Kiwi Limited",
-        "url": "https://evil.kiwi",
-        "email": "support@evil.kiwi"
+        "name": "OYED",
+        "url": "https://oyed.dev",
+        "email": "support@oyed.dev"
     },
-    "homepage": "https://github.com/evilkiwi/form",
+    "homepage": "https://github.com/oyed/form",
     "bugs": {
-        "url": "https://github.com/evilkiwi/form/issues"
+        "url": "https://github.com/oyed/form/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/evilkiwi/form.git"
+        "url": "git+https://github.com/oyed/form.git"
     },
     "keywords": [
         "typescript",
@@ -30,25 +30,23 @@
         "validation",
         "hook"
     ],
-    "workspaces": [
-        "example"
-    ],
     "scripts": {
         "clean": "rimraf build",
-        "prepack": "yarn build",
-        "build": "yarn clean && yarn compile",
+        "prepack": "pnpm run build",
+        "build": "pnpm run clean && pnpm run compile",
         "compile": "vite build",
         "dev": "vite build --watch"
     },
     "devDependencies": {
-        "@vitejs/plugin-vue": "^2.3.1",
-        "@vue/compiler-sfc": "^3.2.33",
-        "async-validator": "^4.0.7",
+        "@vitejs/plugin-vue": "^3.1.0",
+        "@vue/compiler-sfc": "^3.2.40",
+        "async-validator": "^4.2.5",
         "rimraf": "^3.0.2",
-        "tslib": "^2.3.1",
-        "typescript": "^4.6.3",
-        "vite": "^2.9.5",
-        "vite-plugin-dts": "^1.1.0",
-        "vue": "^3.2.33"
+        "terser": "^5.15.0",
+        "tslib": "^2.4.0",
+        "typescript": "^4.8.4",
+        "vite": "^3.1.4",
+        "vite-plugin-dts": "^1.6.1",
+        "vue": "^3.2.40"
     }
 }
