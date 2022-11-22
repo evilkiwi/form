@@ -1,15 +1,15 @@
 <div align="center">
-    <a href="https://www.npmjs.com/package/@oyed/form" target="_blank">
-        <img src="https://img.shields.io/npm/v/@oyed/form?style=flat-square" alt="NPM" />
+    <a href="https://www.npmjs.com/package/@evilkiwi/form" target="_blank">
+        <img src="https://img.shields.io/npm/v/@evilkiwi/form?style=flat-square" alt="NPM" />
     </a>
     <a href="https://discord.gg/3S6AKZ2GR9" target="_blank">
         <img src="https://img.shields.io/discord/1000565079789535324?color=7289DA&label=discord&logo=discord&logoColor=FFFFFF&style=flat-square" alt="Discord" />
     </a>
-    <img src="https://img.shields.io/npm/l/@oyed/form?style=flat-square" alt="GPL-3.0-only" />
+    <img src="https://img.shields.io/npm/l/@evilkiwi/form?style=flat-square" alt="GPL-3.0-only" />
     <h3>Form Handling and Validation Hook for Vue 3</h3>
 </div>
 
-`@oyed/form` provides Vue 3 Hooks for consuming, validating and managing Forms.
+`@evilkiwi/form` provides Vue 3 Hooks for consuming, validating and managing Forms.
 
 Inspired by [vue-hooks-form](https://github.com/beizhedenglong/vue-hooks-form).
 
@@ -23,16 +23,16 @@ Inspired by [vue-hooks-form](https://github.com/beizhedenglong/vue-hooks-form).
 This package is available via NPM:
 
 ```bash
-yarn add @oyed/form
+yarn add @evilkiwi/form
 
 # or
 
-npm install @oyed/form
+npm install @evilkiwi/form
 ```
 
 ## Usage
 
-A full example App is provided in the [example](https://github.com/oyed/form/tree/master/example) folder.
+A full example App is provided in the [example](https://github.com/evilkiwi/form/tree/master/example) folder.
 
 ```vue
 <template>
@@ -67,7 +67,7 @@ A full example App is provided in the [example](https://github.com/oyed/form/tre
 </template>
 
 <script lang="ts" setup>
-    import { useForm } from '@oyed/form';
+    import { useForm } from '@evilkiwi/form';
 
     const { useField, handle, loading } = useForm<{
         email: string;

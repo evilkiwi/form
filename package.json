@@ -1,6 +1,6 @@
 {
-    "name": "@oyed/form",
-    "version": "1.0.8",
+    "name": "@evilkiwi/form",
+    "version": "1.0.9",
     "description": "Vue 3 Utility Hook for Form handling and validation",
     "files": [
         "build"
@@ -11,17 +11,17 @@
     "types": "./build/index.d.ts",
     "license": "GPL-3.0-only",
     "author": {
-        "name": "OYED",
-        "url": "https://oyed.dev",
-        "email": "support@oyed.dev"
+        "name": "Evil Kiwi Limited",
+        "url": "https://evil.kiwi",
+        "email": "support@evil.kiwi"
     },
-    "homepage": "https://github.com/oyed/form",
+    "homepage": "https://github.com/evilkiwi/form",
     "bugs": {
-        "url": "https://github.com/oyed/form/issues"
+        "url": "https://github.com/evilkiwi/form/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/oyed/form.git"
+        "url": "git+https://github.com/evilkiwi/form.git"
     },
     "keywords": [
         "typescript",
@@ -38,15 +38,15 @@
         "dev": "vite build --watch"
     },
     "devDependencies": {
-        "@vitejs/plugin-vue": "^3.1.0",
-        "@vue/compiler-sfc": "^3.2.40",
+        "@vitejs/plugin-vue": "^3.2.0",
+        "@vue/compiler-sfc": "^3.2.45",
         "async-validator": "^4.2.5",
         "rimraf": "^3.0.2",
-        "terser": "^5.15.0",
-        "tslib": "^2.4.0",
-        "typescript": "^4.8.4",
-        "vite": "^3.1.4",
-        "vite-plugin-dts": "^1.6.1",
-        "vue": "^3.2.40"
+        "terser": "^5.15.1",
+        "tslib": "^2.4.1",
+        "typescript": "^4.9.3",
+        "vite": "^3.2.4",
+        "vite-plugin-dts": "^1.7.1",
+        "vue": "^3.2.45"
     }
 }

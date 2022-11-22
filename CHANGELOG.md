@@ -1,3 +1,8 @@
+# 1.0.9 (2022-11-22)
+
+- Move back to Evil Kiwi (`@evilkiwi/form`)
+- Update dependencies
+
 # 1.0.8 (2022-09-29)
 
 - Moved to OYED `@oyed/form`
