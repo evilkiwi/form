@@ -3,18 +3,26 @@
         <div>Framework: {{ frameworkRadio.value }}</div>
 
         <template v-for="framework in frameworks">
-            <input type="radio" :id="framework" :value="framework" v-model="frameworkRadio.value" />
+            <input 
+                type="radio"
+                :id="framework" 
+                :value="framework"
+                v-model="frameworkRadio.value" 
+                @focus="frameworkRadio.clearError" 
+                :disabled="loading" />
             <label :for="framework">{{ framework }}</label>
         </template>
 
         <p class="err" v-if="frameworkRadio.hasError">{{ frameworkRadio.error?.message }}</p>
         <hr />
         <div>Do you like Vue?</div>
-        <input type="radio" id="true" :value="true" v-model="likeVue.value" />
+        <input type="radio" id="true" :value="true" v-model="likeVue.value" @focus="likeVue.clearError" :disabled="loading" />
         <label for="true">Yes</label>
 
-        <input type="radio" id="false" :value="false" v-model="likeVue.value" />
+        <input type="radio" id="false" :value="false" v-model="likeVue.value" @focus="likeVue.clearError" :disabled="loading" />
         <label for="false">No</label>
+
+        <p class="err" v-if="likeVue.hasError">{{ likeVue.error?.message }}</p>
         <hr />
         <button
             type="submit"
