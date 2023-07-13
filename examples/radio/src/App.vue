@@ -1,25 +1,18 @@
 <template>
     <form @submit.prevent="submit">
-        <div>Framework: {{ framework.value }}</div>
+        <div>Framework: {{ frameworkRadio.value }}</div>
 
-        <input type="radio" id="Vue" value="Vue" v-model="framework.value" />
-        <label for="Vue">Vue</label>
+        <template v-for="framework in frameworks">
+            <input type="radio" :id="framework" :value="framework" v-model="frameworkRadio.value" />
+            <label :for="framework">{{ framework }}</label>
+        </template>
 
-        <input type="radio" id="React" value="React" v-model="framework.value" />
-        <label for="React">React</label>
-
-        <input type="radio" id="Svelte" value="Svelte" v-model="framework.value" />
-        <label for="Svelte">Svelte</label>
-
-        <input type="radio" id="Solid" value="Solid" v-model="framework.value" />
-        <label for="Solid">Solid</label>
-
-        <p class="err" v-if="framework.hasError">{{ framework.error?.message }}</p>
+        <p class="err" v-if="frameworkRadio.hasError">{{ frameworkRadio.error?.message }}</p>
         <hr />
         <button
             type="submit"
             :disabled="loading"
-        >Login</button>
+        >Submit</button>
         <button
             :disabled="loading"
             @click.prevent="manualError"
@@ -32,13 +25,17 @@
 
     const sleep = (length: number) => new Promise(resolve => window.setTimeout(resolve, length * 1000));
 
+    const frameworks = ['Vue', 'React', 'Svelte', 'Solid'] as const;
+
     const { useField, handle, loading } = useForm<{
-        framework: string;
+        framework: typeof frameworks[number]; // Vue | React | Svelte | Solid
     }>({
-        defaults: { },
+        defaults: { 
+            framework: 'Vue'
+        },
     });
 
-    const framework = useField('framework', {
+    const frameworkRadio = useField('framework', {
         required: true,
     });
 
@@ -48,7 +45,7 @@
     });
 
     const manualError = () => {
-        framework.setError('Random error 123');
+        frameworkRadio.setError('Random error 123');
     };
 </script>
 
