@@ -31,7 +31,7 @@
         <button
             :disabled="loading"
             @click.prevent="manualError"
-        >Manual error on Password</button>
+        >Manual error</button>
     </form>
 </template>
 
