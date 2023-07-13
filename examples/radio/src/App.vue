@@ -9,6 +9,13 @@
 
         <p class="err" v-if="frameworkRadio.hasError">{{ frameworkRadio.error?.message }}</p>
         <hr />
+        <div>Do you like Vue?</div>
+        <input type="radio" id="true" :value="true" v-model="likeVue.value" />
+        <label for="true">Yes</label>
+
+        <input type="radio" id="false" :value="false" v-model="likeVue.value" />
+        <label for="false">No</label>
+        <hr />
         <button
             type="submit"
             :disabled="loading"
@@ -29,6 +36,7 @@
 
     const { useField, handle, loading } = useForm<{
         framework: typeof frameworks[number]; // Vue | React | Svelte | Solid
+        likeVue: boolean;
     }>({
         defaults: { 
             framework: 'Vue'
@@ -39,9 +47,13 @@
         required: true,
     });
 
-    const submit = handle(async ({ framework }) => {
+    const likeVue = useField('likeVue', {
+        required: true,
+    });
+
+    const submit = handle(async ({ framework, likeVue }) => {
         await sleep(2);
-        alert(`Framework: ${framework}`);
+        alert(`Framework: ${framework}, like Vue: ${likeVue}`);
     });
 
     const manualError = () => {
