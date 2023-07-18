@@ -32,7 +32,7 @@ npm install @evilkiwi/form
 
 ## Usage
 
-A full example App is provided in the [example](https://github.com/evilkiwi/form/tree/master/example) folder.
+A simple example app is provided in the [examples/simple](https://github.com/evilkiwi/form/tree/master/examples/simple) folder.
 
 ```vue
 <template>
