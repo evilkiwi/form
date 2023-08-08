@@ -1,3 +1,7 @@
+# 1.0.10 (2023-08-08)
+
+- Thanks @joshuanianji! Fixed typings for validator
+
 # 1.0.9 (2022-11-22)
 
 - Move back to Evil Kiwi (`@evilkiwi/form`)
