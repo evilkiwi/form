@@ -36,7 +36,7 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
     }
 
     // Validates all of the releveant fields.
-    const validate = async () => new Promise(resolve => {
+    const validate = async (): Promise<boolean> => new Promise(resolve => {
         validator.validate(fields.value, undefined, (errs, fields) => {
             if (errs) {
                 const total = errs.length;
@@ -82,7 +82,7 @@ export function useForm<Fields extends DefaultFields>(options: Options<Fields>) 
 
         // Computed property for fetching the current error(s).
         const fieldErrors = computed<ValidateError[]>(() => errors.value[name] ?? []);
-        const fieldError = computed<ValidateError|null>(() => {
+        const fieldError = computed<ValidateError | null>(() => {
             return fieldErrors.value.length > 0 ? fieldErrors.value[0] : null;
         });
 
