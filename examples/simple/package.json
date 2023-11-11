@@ -1,14 +1,14 @@
 {
-    "private": true,
-    "name": "@evilkiwi/form-example-simple",
-    "scripts": {
-        "dev": "vite"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-vue": "^3.2.0",
-        "@vue/compiler-sfc": "^3.2.45",
-        "typescript": "^4.9.3",
-        "vite": "^3.2.4",
-        "vue": "^3.2.45"
-    }
+  "private": true,
+  "name": "@evilkiwi/form-example-simple",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.1",
+    "@vue/compiler-sfc": "^3.2.45",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vue": "^3.2.45"
+  }
 }

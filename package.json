@@ -1,52 +1,55 @@
 {
-    "name": "@evilkiwi/form",
-    "version": "1.0.10",
-    "description": "Vue 3 Utility Hook for Form handling and validation",
-    "files": [
-        "build"
-    ],
-    "sideEffects": false,
-    "main": "./build/index.js",
-    "module": "./build/index.mjs",
-    "types": "./build/index.d.ts",
-    "license": "GPL-3.0-only",
-    "author": {
-        "name": "Evil Kiwi Limited",
-        "url": "https://evil.kiwi",
-        "email": "support@evil.kiwi"
-    },
-    "homepage": "https://github.com/evilkiwi/form",
-    "bugs": {
-        "url": "https://github.com/evilkiwi/form/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/evilkiwi/form.git"
-    },
-    "keywords": [
-        "typescript",
-        "vue",
-        "form",
-        "validation",
-        "hook"
-    ],
-    "scripts": {
-        "clean": "rimraf build",
-        "prepack": "pnpm run build",
-        "build": "pnpm run clean && pnpm run compile",
-        "compile": "vite build",
-        "dev": "vite build --watch"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-vue": "^3.2.0",
-        "@vue/compiler-sfc": "^3.2.45",
-        "async-validator": "^4.2.5",
-        "rimraf": "^3.0.2",
-        "terser": "^5.15.1",
-        "tslib": "^2.4.1",
-        "typescript": "^4.9.3",
-        "vite": "^3.2.4",
-        "vite-plugin-dts": "^1.7.1",
-        "vue": "^3.2.45"
-    }
+  "name": "@evilkiwi/form",
+  "version": "1.1.0",
+  "description": "Vue 3 Utility Hook for Form handling and validation",
+  "files": [
+    "build"
+  ],
+  "sideEffects": false,
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "Evil Kiwi Limited",
+    "url": "https://evil.kiwi",
+    "email": "support@evil.kiwi"
+  },
+  "homepage": "https://github.com/evilkiwi/form",
+  "bugs": {
+    "url": "https://github.com/evilkiwi/form/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilkiwi/form.git"
+  },
+  "keywords": [
+    "typescript",
+    "vue",
+    "form",
+    "validation",
+    "hook"
+  ],
+  "scripts": {
+    "clean": "rimraf build",
+    "prepack": "pnpm run build",
+    "build": "pnpm run clean && pnpm run compile",
+    "compile": "vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@vitejs/plugin-vue": "^4.4.1",
+    "@vue/compiler-sfc": "^3.3.8",
+    "async-validator": "^4.2.5",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "rimraf": "^5.0.5",
+    "terser": "^5.24.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-dts": "^3.6.3",
+    "vue": "^3.3.8"
+  }
 }

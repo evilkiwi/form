@@ -1,3 +1,9 @@
+# 1.1.0 (2023-11-11)
+
+- Fix issue with resetting
+- Update dependencies
+- Changed repo structure
+
 # 1.0.10 (2023-08-08)
 
 - Thanks @joshuanianji! Fixed typings for validator
